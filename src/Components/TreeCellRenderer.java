@@ -29,7 +29,11 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 		}
 		
 		setIcon(ImageLoader.loadImage("images/document_small.png"));
-		
+		if(sel){
+			// setBackground(getBackgroundSelectionColor()); 
+			// some reason not working on windows
+			setForeground(getBackgroundSelectionColor());
+		}
 		
 		return c;
 	}
