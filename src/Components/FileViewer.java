@@ -84,6 +84,7 @@ public class FileViewer {
 			public void valueChanged(TreeSelectionEvent e) {
 				DefaultMutableTreeNode node = (DefaultMutableTreeNode)
 						tree.getLastSelectedPathComponent();
+						
 
 				if(node == null){
 					return;
@@ -94,6 +95,7 @@ public class FileViewer {
 				for(int i = 0 ; i < pane.getTabCount() ; i++){
 					if(((TextPanel)pane.getComponentAt(i)).unique == ((TreeNode)node).unique){
 						pane.setSelectedIndex(i);
+						
 					}
 				}
 			}

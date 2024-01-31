@@ -15,7 +15,7 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 
 	@Override
 	public Component getTreeCellRendererComponent(JTree tree, Object value,
-			boolean sel, boolean expanded, boolean leaf, int row,
+			boolean selected, boolean expanded, boolean leaf, int row,
 			boolean hasFocus) {
 
 		Component c = super.getTreeCellRendererComponent(tree, value,
@@ -29,11 +29,12 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 		}
 		
 		setIcon(ImageLoader.loadImage("images/document_small.png"));
-		if(sel){
+		// if(selected){
+			// LinePainter(c,getBackgroundSelectionColor());
 			// setBackground(getBackgroundSelectionColor()); 
 			// some reason not working on windows
-			setForeground(getBackgroundSelectionColor());
-		}
+			// setForeground(getBackgroundSelectionColor());
+		// }
 		
 		return c;
 	}
